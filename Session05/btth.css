@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4fcff;
+    color: #333;
+}
+
+header {
+    background-color: #0088cc;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+header p {
+    margin: 5px 0 0 0;
+    font-style: italic;
+    font-size: 14px;
+}
+
+main {
+    padding: 20px 40px;
+}
+
+h2 {
+    color: #0077b6;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.highlight-blue {
+    color: #0077b6;
+    font-style: italic;
+}
+
+.service-list {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.service-list li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.service-list li::before {
+    content: "🦷";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 14px;
+}
+
+.link-item {
+    color: #0088cc;
+    cursor: pointer;
+}
+
+.warning {
+    color: #d32f2f;
+    font-style: italic;
+}
+
+.booking-link {
+    color: #0056b3;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #0088cc;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    margin-top: 30px;
+    font-size: 20px;
+}

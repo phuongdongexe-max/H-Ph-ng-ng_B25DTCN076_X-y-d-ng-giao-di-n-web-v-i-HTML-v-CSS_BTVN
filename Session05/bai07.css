@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 700px;
+    text-align: center;
+}
+
+.banner {
+    background-color: #f0f8ff;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.banner h1 {
+    color: #1e90ff;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.banner .description {
+    color: #1e90ff;
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.address-section h2 {
+    color: #1e90ff;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.address-list p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.addr-red {
+    color: red !important;
+}
+
+.addr-italic {
+    font-style: italic;
+}
+
+.addr-underline {
+    text-decoration: underline;
+}
+
+.addr-bold {
+    font-weight: bold;
+}
