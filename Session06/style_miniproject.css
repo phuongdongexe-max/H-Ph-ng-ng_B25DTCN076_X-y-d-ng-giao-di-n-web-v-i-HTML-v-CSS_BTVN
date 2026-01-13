@@ -1,105 +1,165 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f0faff;
+    padding: 0;
+    background-color: #f8fafc;
+    color: #333;
 }
+
+input[type="radio"] {
+    display: none;
+}
+
 header {
-    background-color: #e0fff9;
     text-align: center;
-    padding: 10px 0;
 }
-header h1 {
-    color: #00796b;
-    margin: 0 0 10px 0;
+
+.header-banner {
+    background-color: #c1f2e7;
+    padding: 25px 0;
 }
+
+.header-banner h1 {
+    margin: 0;
+    color: #006b5d;
+    font-size: 26px;
+    display: none;
+}
+
 nav {
-    background-color: #e3f2fd;
+    background-color: #d8eaff;
+    padding: 12px 0;
+    border-bottom: 1px solid #bdd7f5;
+}
+
+nav label {
+    margin: 0 15px;
+    color: #0056b3;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+nav label:hover {
+    color: #003d80;
+}
+
+#tab-home:checked ~ header .title-home,
+#tab-services:checked ~ header .title-services,
+#tab-appointment:checked ~ header .title-appointment {
+    display: block;
+}
+
+#tab-home:checked ~ main #content-home,
+#tab-services:checked ~ main #content-services,
+#tab-appointment:checked ~ main #content-appointment {
+    display: block;
+}
+
+.page {
+    display: none;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #fff;
+    min-height: 500px;
+}
+
+.container {
+    padding: 20px 40px;
+}
+
+.hero-image {
+    text-align: center;
     padding: 10px;
 }
-nav a {
-    text-decoration: none;
-    color: #006699;
-    font-weight: bold;
-    margin: 0 15px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-nav a:hover, nav a.active {
-    background-color: #0082c9;
-    color: white;
-}
-.header-main {
-    background-color: #e0fff9;
-    color: #00796b;
-    text-align: center;
-    padding: 15px;
-    margin: 0;
-}
-.title-bar {
-    background-color: #e0fff9;
-    color: #005b4f;
-    padding: 8px 20px;
-    font-size: 20px;
-}
-.section {
-    padding-bottom: 30px;
-}
-.banner img {
-    width: 100%;
-    display: block;
-}
-.intro {
-    padding: 0 10%;
-    background: white;
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
 }
 
-.service-table {
+.sub-title {
+    color: #006b5d;
+    border-bottom: 2px solid #006b5d;
+    display: inline-block;
+    margin-top: 25px;
+}
+
+.feature-list {
+    line-height: 1.8;
+}
+
+/* Bảng Dịch Vụ */
+.data-table {
     width: 100%;
     border-collapse: collapse;
-    background: white;
-}
-.service-table th, .service-table td {
-    border: 1px solid #333;
-    padding: 15px;
-    text-align: left;
-}
-.service-table th {
-    background-color: #b3e5fc;
-    color: #004d40;
+    margin-top: 30px;
 }
 
-.booking-form {
+.data-table th {
+    background-color: #add8f4;
+    color: #0056b3;
+    padding: 15px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.data-table td {
+    padding: 12px;
+    border: 1px solid #eee;
+}
+
+/* Form Đăng Ký */
+.form-wrapper {
     max-width: 500px;
-    margin: 20px auto;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
     text-align: center;
 }
-.booking-form label {
+
+.form-group label {
     display: block;
     font-weight: bold;
-    margin: 10px 0 5px;
+    margin-bottom: 8px;
+    color: #006b5d;
 }
-.booking-form input, .booking-form select, .booking-form textarea {
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #999;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
-.booking-form button {
+
+.submit-btn {
+    display: block;
+    margin: 25px auto;
     background-color: #009688;
     color: white;
+    padding: 12px 30px;
     border: none;
-    padding: 10px 25px;
     font-weight: bold;
     cursor: pointer;
 }
-.booking-form button:hover {
+
+.submit-btn:hover {
     background-color: #00796b;
 }
 
 footer {
-    background-color: #005b4f;
+    background-color: #006b5d;
     color: white;
     text-align: center;
-    padding: 15px 0;
+    padding: 20px 0;
+    margin-top: 50px;
 }
-footer p { margin: 5px 0; font-size: 14px; }
+
+footer p {
+    margin: 5px 0;
+}
