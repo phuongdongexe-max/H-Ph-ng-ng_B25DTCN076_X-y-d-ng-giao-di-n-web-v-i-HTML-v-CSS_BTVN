@@ -1,0 +1,79 @@
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.treatment-card {
+    width: 450px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.treatment-title {
+    margin: 0;
+    font-size: 22px;
+    color: #333;
+}
+
+.status-badge {
+    background-color: #fff3e0;
+    color: #ef6c00;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.info-section p {
+    margin: 8px 0;
+    color: #666;
+}
+
+.info-section i {
+    width: 20px;
+    margin-right: 8px;
+    color: #555;
+}
+
+.progress-section {
+    margin: 20px 0;
+}
+
+.progress-label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.progress-bar-bg {
+    width: 100%;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    width: 70%;
+    height: 100%;
+    background-color: #1eff29;
+}
+
+.date-section p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #888;
+}

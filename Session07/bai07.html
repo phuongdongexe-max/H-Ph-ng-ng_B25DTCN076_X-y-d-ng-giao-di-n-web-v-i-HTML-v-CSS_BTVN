@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biểu mẫu Feedback Nha Khoa</title>
+    <link rel="stylesheet" href="style07.css">
+</head>
+<body>
+
+    <div class="feedback-container">
+        <h1>Biểu Mẫu Feedback Phòng Khám Nha Khoa</h1>
+        
+        <form action="#">
+            <div class="form-group">
+                <label for="fullname">Họ và tên</label>
+                <input type="text" id="fullname" placeholder="Nhập họ tên">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="example@gmail.com">
+            </div>
+
+            <div class="form-group">
+                <label for="service">Dịch vụ đã sử dụng</label>
+                <select id="service">
+                    <option value="tong-quat">Khám răng tổng quát</option>
+                    <option value="nieng-rang">Niềng răng</option>
+                    <option value="tay-trang">Tẩy trắng răng</option>
+                    <option value="implant">Cấy ghép Implant</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="satisfaction">Mức độ hài lòng</label>
+                <select id="satisfaction">
+                    <option value="rat-hai-long">Rất hài lòng</option>
+                    <option value="hai-long">Hài lòng</option>
+                    <option value="binh-thuong">Bình thường</option>
+                    <option value="khong-hai-long">Không hài lòng</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Nội dung phản hồi</label>
+                <textarea id="message" rows="5" placeholder="Hãy cho chúng tôi biết cảm nhận của bạn..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Gửi feedback</button>
+        </form>
+    </div>
+
+</body>
+</html>

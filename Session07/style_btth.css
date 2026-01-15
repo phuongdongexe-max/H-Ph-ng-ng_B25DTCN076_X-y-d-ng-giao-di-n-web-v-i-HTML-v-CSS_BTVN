@@ -1,0 +1,199 @@
+/* --- CÀI ĐẶT CƠ BẢN --- */
+:root {
+    --primary-blue: #0d6efd; /* Màu xanh sáng của nút */
+    --hover-blue: #0b5ed7;   /* Màu khi di chuột vào nút */
+    --bg-dark: linear-gradient(135deg, #051937, #004d7a); /* Gradient nền Hero */
+    --text-white: #ffffff;
+    --text-gray: #6c757d;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- PHẦN 1: HERO SECTION --- */
+.hero-section {
+    background: var(--bg-dark);
+    color: var(--text-white);
+    padding: 80px 0;
+    position: relative;
+    /* Để tạo không gian rộng như ảnh */
+    min-height: 500px; 
+}
+
+.badge-top {
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 20px;
+    background: rgba(255,255,255,0.05);
+}
+
+h1 { font-size: 40px; margin-bottom: 15px; line-height: 1.2; }
+.hero-desc { max-width: 600px; margin-bottom: 30px; opacity: 0.9; }
+
+/* --- BUTTON EFFECTS (HIỆU ỨNG NÚT) --- */
+.btn-group { display: flex; gap: 15px; margin-bottom: 50px; }
+
+.btn {
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 50px; /* Bo tròn kiểu viên thuốc */
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease; /* Thời gian chuyển động mượt */
+}
+
+/* Nút Đặt lịch khám */
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: white;
+    border: 2px solid var(--primary-blue);
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #0043a8; /* Đậm hơn khi hover */
+    border-color: #0043a8;
+    transform: translateY(-2px); /* Nổi lên nhẹ */
+    box-shadow: 0 6px 20px rgba(13, 110, 253, 0.5);
+}
+
+/* Nút Xem dịch vụ */
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue); /* Viền xanh */
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-blue); /* Đổi nền thành xanh */
+    color: white; /* Đổi chữ thành trắng */
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
+/* --- STATS BOX EFFECTS (KHỐI THÔNG TIN) --- */
+.stats-group {
+    display: flex;
+    flex-direction: column; /* Xếp dọc như ảnh */
+    gap: 15px;
+    max-width: 250px;
+}
+
+.stat-box {
+    background: rgba(30, 50, 80, 0.6); /* Nền tối bán trong suốt */
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Viền mờ */
+    padding: 15px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Hiệu ứng mượt */
+}
+
+.stat-box strong {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-box span {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* Hiệu ứng khi di chuột vào khối Stats */
+.stat-box:hover {
+    background: var(--primary-blue); /* Đổi màu nền sang xanh sáng */
+    border-color: var(--primary-blue);
+    transform: translateX(10px); /* Dịch chuyển sang phải một chút */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* --- SERVICE CARD EFFECTS (THẺ DỊCH VỤ) --- */
+.service-section { padding: 60px 0; }
+.section-title { margin-bottom: 40px; }
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); /* Bóng mờ nhẹ */
+    max-width: 600px;
+    position: relative;
+    border: 1px solid #eee;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Hiệu ứng nảy */
+}
+
+/* Hiệu ứng khi di chuột vào Card */
+.service-card:hover {
+    transform: translateY(-10px); /* Nổi lên trên 10px */
+    box-shadow: 0 15px 30px rgba(13, 110, 253, 0.15); /* Bóng đổ đậm và xanh hơn */
+    border-color: rgba(13, 110, 253, 0.3);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.service-card h3 { margin: 0; font-size: 20px; color: #333; }
+
+.hot-badge {
+    background: #e7f1ff;
+    color: #0d6efd;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.card-desc { color: #666; margin-bottom: 20px; font-size: 15px; }
+
+.card-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.card-features li {
+    margin-bottom: 10px;
+    color: #444;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.card-features li::before {
+    content: "•";
+    color: #333;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 10px;
+    line-height: 1;
+}
+
+.link-price {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+.link-price:hover {
+    color: #0043a8;
+    text-decoration: underline;
+}
