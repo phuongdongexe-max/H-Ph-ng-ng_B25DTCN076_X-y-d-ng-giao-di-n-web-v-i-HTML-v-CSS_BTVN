@@ -1,0 +1,23 @@
+.topbar {
+    background: #c0392b;
+    padding: 8px 10px;
+    font-style: italic;
+    font-weight: bold;   
+    text-align: left;
+}
+
+.footer {
+    background: #2c2c2c;
+    color: #FFF8E1;
+    text-align: center;
+    padding: 18px 12px;
+}
+
+.home {
+    text-align: left;
+}
+
+.tag {
+    text-align: right;
+}
+
