@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elearning Dashboard Full</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">Elearning</div>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Tìm khóa học...">
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item">Khóa học</a>
+                <a href="#" class="nav-item">Tiến độ</a>
+                <a href="#" class="nav-item">Hồ sơ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        
+        <section class="welcome-card">
+            <div class="welcome-text">
+                <h1>Xin chào, Bạn tôi!</h1>
+                <p>Chúc bạn học tập hiệu quả hôm nay</p>
+            </div>
+            <div class="welcome-progress">
+                <span class="progress-label">Tiến độ tổng: 68%</span>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 68%;"></div>
+                </div>
+            </div>
+        </section>
+
+        <h2 class="section-heading">Khóa học đang học</h2>
+        <div class="grid-container col-3">
+            
+            <div class="course-card">
+                <img src="https://picsum.photos/400/220?random=1" alt="Course Image" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">CSS Flexbox & Grid</h3>
+                    <p class="card-sub">Hoàn thành: 85%</p>
+                    <button class="btn btn-primary">Tiếp tục học</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="https://picsum.photos/400/220?random=2" alt="Course Image" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">JavaScript Cơ bản</h3>
+                    <p class="card-sub">Hoàn thành: 42%</p>
+                    <button class="btn btn-primary">Tiếp tục học</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="https://picsum.photos/400/220?random=3" alt="Course Image" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Responsive Web Design</h3>
+                    <p class="card-sub">Hoàn thành: 95%</p>
+                    <button class="btn btn-primary">Tiếp tục học</button>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="section-heading">Khóa học gợi ý</h2>
+        <div class="grid-container col-2">
+            
+            <div class="course-card">
+                <img src="https://picsum.photos/500/250?random=4" alt="Course Image" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">React cho người mới</h3>
+                    <p class="card-desc">Bắt đầu ngay hôm nay để trở thành Frontend Dev</p>
+                    <button class="btn btn-primary">Xem chi tiết</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="https://picsum.photos/500/250?random=5" alt="Course Image" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Python Cơ bản</h3>
+                    <p class="card-desc">Phù hợp beginner bắt đầu với lập trình</p>
+                    <button class="btn btn-primary">Xem chi tiết</button>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

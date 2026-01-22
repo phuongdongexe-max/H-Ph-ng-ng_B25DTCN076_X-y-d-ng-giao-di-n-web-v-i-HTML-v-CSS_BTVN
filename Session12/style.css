@@ -1,0 +1,168 @@
+/* --- Global Reset --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    color: #1f2937;
+    padding-bottom: 50px; /* Tạo khoảng trống dưới cùng trang */
+}
+
+/* --- HEADER --- */
+.main-header {
+    background-color: #1a73e8;
+    height: 64px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky; /* Giữ header khi cuộn */
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo { color: white; font-size: 24px; font-weight: 700; cursor: pointer; min-width: 150px; }
+
+.search-container { flex-grow: 1; display: flex; justify-content: center; }
+.search-input {
+    width: 100%; max-width: 400px; height: 40px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: none; border-radius: 20px; padding: 0 20px;
+    color: white; outline: none; transition: background 0.2s;
+}
+.search-input::placeholder { color: rgba(255, 255, 255, 0.7); }
+.search-input:focus { background-color: rgba(255, 255, 255, 0.25); }
+
+.nav-menu { display: flex; gap: 30px; min-width: 150px; justify-content: flex-end; }
+.nav-item { text-decoration: none; color: rgba(255, 255, 255, 0.9); font-weight: 500; }
+.nav-item:hover { color: #ffffff; }
+
+/* --- MAIN LAYOUT --- */
+.main-content {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* --- WELCOME CARD --- */
+.welcome-card {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    margin-bottom: 40px; /* Cách phần dưới ra */
+}
+
+.welcome-text h1 { font-size: 24px; font-weight: 700; color: #1f2937; margin-bottom: 4px; }
+.welcome-text p { font-size: 14px; color: #6b7280; }
+
+.welcome-progress { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.progress-label { font-size: 14px; color: #374151; font-weight: 500; }
+.progress-bar-bg { width: 200px; height: 8px; background-color: #e5e7eb; border-radius: 10px; overflow: hidden; }
+.progress-bar-fill { height: 100%; background-color: #1a73e8; border-radius: 10px; }
+
+/* --- SECTION HEADINGS --- */
+.section-heading {
+    font-size: 20px;
+    color: #1a73e8; /* Màu xanh tiêu đề giống ảnh */
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* --- GRID SYSTEM CHO CÁC KHÓA HỌC --- */
+.grid-container {
+    display: grid;
+    gap: 24px; /* Khoảng cách giữa các thẻ */
+    margin-bottom: 40px;
+}
+
+/* Grid 3 cột (cho khóa học đang học) */
+.col-3 { grid-template-columns: repeat(3, 1fr); }
+
+/* Grid 2 cột (cho khóa học gợi ý) */
+.col-2 { grid-template-columns: repeat(2, 1fr); }
+
+/* --- COURSE CARD STYLES --- */
+.course-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden; /* Để ảnh bo góc theo thẻ */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    transform: translateY(-5px); /* Hiệu ứng nổi lên khi di chuột */
+}
+
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Đảm bảo ảnh luôn đẹp dù kích thước nào */
+}
+
+.card-body {
+    padding: 20px;
+    flex-grow: 1; /* Để đẩy nút xuống đáy bằng nhau */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.card-sub { font-size: 14px; color: #6b7280; margin-bottom: 20px; }
+.card-desc { font-size: 14px; color: #6b7280; margin-bottom: 20px; line-height: 1.4; }
+
+/* Nút bấm chung */
+.btn {
+    margin-top: auto; /* Đẩy nút xuống dưới cùng thẻ */
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.btn-primary {
+    background-color: #1a73e8; /* Xanh dương google */
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1557b0;
+}
+
+/* --- RESPONSIVE (MOBILE) --- */
+@media (max-width: 768px) {
+    .header-content { padding: 0 15px; }
+    .nav-menu { display: none; } /* Ẩn menu trên mobile */
+    
+    .welcome-card { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .welcome-progress, .progress-bar-bg { width: 100%; align-items: flex-start; }
+
+    /* Chuyển tất cả Grid thành 1 cột trên điện thoại */
+    .col-3, .col-2 { grid-template-columns: 1fr; }
+}
