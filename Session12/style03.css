@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #1f2937;
+}
+
+/* Section chung */
+.pricing-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* --- Header phần giá --- */
+.badge-soft {
+    display: inline-block;
+    background-color: #eef2ff;
+    color: #6366f1;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.section-subtitle {
+    color: #6b7280;
+    margin-bottom: 50px;
+    font-size: 16px;
+}
+
+/* --- Grid Container --- */
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Để các thẻ cao bằng nhau */
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* --- Card Styles --- */
+.price-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px 30px;
+    width: 350px;
+    border: 1px solid #f3f4f6;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+
+.price-card:hover {
+    transform: translateY(-5px); /* Hiệu ứng nhấc nhẹ khi hover */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Style riêng cho thẻ Featured (Chuyên nghiệp) */
+.price-card.featured {
+    border: 2px solid #6366f1; /* Viền xanh tím */
+    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.plan-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+.price {
+    font-size: 42px;
+    font-weight: 700;
+    color: #6366f1;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.price.text-blue {
+    color: #4f46e5; /* Màu xanh đậm hơn chút cho bản Pro */
+}
+
+/* Chỉnh màu riêng cho giá gói Cơ bản giống ảnh (màu tím nhạt hơn) */
+.price-card:first-child .price {
+    color: #818cf8; 
+}
+
+.period {
+    font-size: 16px;
+    color: #9ca3af;
+    font-weight: 400;
+}
+
+/* --- Feature List --- */
+.feature-list {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 40px;
+    flex-grow: 1; /* Đẩy nút xuống dưới cùng */
+}
+
+.feature-list li {
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Icon tích xanh */
+.check-icon {
+    stroke: #10b981; /* Màu xanh lá */
+    flex-shrink: 0;
+}
+
+/* Style riêng cho list của gói Cơ bản (chữ xám nhạt, không icon) */
+.basic-list li {
+    color: #6b7280;
+    padding-left: 5px; /* Thụt vào một chút cho thẳng hàng */
+}
+
+/* --- Buttons --- */
+.btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+/* Nút viền (Outline) */
+.btn-outline {
+    background-color: white;
+    border: 1px solid #3b82f6;
+    color: #3b82f6;
+}
+
+.btn-outline:hover {
+    background-color: #eff6ff;
+}
+
+/* Nút đặc (Primary - cho gói Featured) */
+.btn-primary {
+    background-color: #1d4ed8; /* Xanh dương đậm */
+    border: 1px solid #1d4ed8;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1e40af;
+}
