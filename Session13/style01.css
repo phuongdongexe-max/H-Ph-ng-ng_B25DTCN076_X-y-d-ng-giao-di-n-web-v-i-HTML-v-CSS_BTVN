@@ -1,0 +1,139 @@
+/* --- Global Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9; /* Nền xám nhạt */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Giữa màn hình theo chiều dọc */
+    padding: 20px; /* Padding cho body để không sát lề trên mobile */
+}
+
+/* --- Container Card --- */
+.register-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 520px; /* Độ rộng tối đa giống ảnh Desktop */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Đổ bóng nhẹ */
+    border: 1px solid #eee;
+}
+
+/* --- Header Styles --- */
+.card-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.card-header p {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* --- Form Styles --- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151; /* Màu chữ xám đậm */
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db; /* Viền xám nhạt */
+    border-radius: 6px;
+    font-size: 14px;
+    color: #111827;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input::placeholder {
+    color: #9ca3af; /* Màu placeholder nhạt hơn */
+}
+
+.form-group input:focus {
+    border-color: #2563eb; /* Màu xanh khi bấm vào */
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* --- Grid Layout cho Hàng Họ Tên --- */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Chia đôi cột: 50% - 50% */
+    gap: 20px; /* Khoảng cách giữa 2 ô input */
+}
+
+/* --- Button Style --- */
+.btn-submit {
+    width: 100%;
+    background-color: #1a73e8; /* Màu xanh chủ đạo giống ảnh */
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #1557b0;
+}
+
+/* --- Footer Styles --- */
+.card-footer {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.card-footer a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.card-footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- Responsive (Mobile) --- */
+@media (max-width: 576px) {
+    .register-card {
+        padding: 30px 20px; /* Giảm padding trên điện thoại */
+    }
+
+    .form-row {
+        grid-template-columns: 1fr; /* Chuyển thành 1 cột dọc */
+        gap: 0; /* Bỏ gap ngang, margin-bottom của .form-group sẽ lo khoảng cách dọc */
+    }
+
+    .card-header h1 {
+        font-size: 24px;
+    }
+}

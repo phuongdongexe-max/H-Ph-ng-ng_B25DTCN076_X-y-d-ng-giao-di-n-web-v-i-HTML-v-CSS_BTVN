@@ -1,0 +1,166 @@
+/* --- Global Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fcfcfc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* --- Login Card --- */
+.login-card {
+    background-color: #ffffff;
+    width: 100%;
+    /* Yêu cầu: Chiều dài 600px */
+    max-width: 600px; 
+    padding: 50px 60px; /* Padding rộng để giống ảnh mẫu */
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); /* Bóng mờ nhẹ */
+    border: 1px solid #f0f0f0;
+}
+
+/* --- Header --- */
+.card-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.card-header h2 {
+    font-size: 30px; /* Chữ to đậm */
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.card-header p {
+    font-size: 15px;
+    color: #6b7280;
+}
+
+/* --- Form Fields --- */
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 16px; /* Ô input cao hơn chút cho thoáng */
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #111827;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.form-group input::placeholder {
+    color: #9ca3af;
+}
+
+.form-group input:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+}
+
+/* --- Options Row (Ghi nhớ & Quên MK) --- */
+.form-options {
+    display: flex;
+    justify-content: space-between; /* Đẩy 2 phần sang 2 bên */
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Style cho Checkbox + Text */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #4b5563;
+    user-select: none;
+}
+
+/* Tinh chỉnh checkbox mặc định (hoặc để mặc định cũng được) */
+.checkbox-container input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #1a73e8; /* Màu xanh cho checkbox khi tích */
+}
+
+/* Link Quên mật khẩu */
+.forgot-password {
+    text-decoration: none;
+    color: #1a73e8;
+    font-weight: 500;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* --- Button --- */
+.btn-submit {
+    width: 100%;
+    background-color: #1a73e8; /* Xanh dương Google */
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #1557b0;
+}
+
+/* --- Footer --- */
+.card-footer {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.card-footer a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+.card-footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px 20px; /* Thu hẹp padding trên điện thoại */
+    }
+
+    .form-options {
+        flex-direction: row; /* Vẫn giữ hàng ngang nếu đủ chỗ */
+        font-size: 13px; /* Giảm cỡ chữ chút */
+    }
+}

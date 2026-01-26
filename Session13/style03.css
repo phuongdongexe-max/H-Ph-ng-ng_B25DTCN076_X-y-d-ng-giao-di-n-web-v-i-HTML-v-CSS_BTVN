@@ -1,0 +1,186 @@
+/* --- Global Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* Giới hạn chiều rộng trên Desktop */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- HEADER STYLES (Desktop First) --- */
+.main-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee; /* Đường kẻ mờ dưới header */
+    padding: 15px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Đẩy 3 phần sang 2 bên và giữa */
+    align-items: center;
+}
+
+/* 1. Logo Styles */
+.brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Căn trái trên Desktop */
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.text-red { color: #b91c1c; } /* Màu đỏ nâu */
+.text-blue { color: #1e3a8a; } /* Màu xanh đậm */
+.leaf-icon { font-size: 18px; margin-left: 2px; color: #10b981; }
+
+.slogan {
+    font-size: 10px;
+    color: #888;
+    margin-top: -2px;
+}
+
+/* 2. Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa các link */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.nav-link:hover {
+    color: #5b50e5;
+}
+
+/* Active State (Mục được chọn) */
+.nav-link.active {
+    background-color: #eff6ff; /* Nền xanh rất nhạt */
+    color: #5b50e5; /* Màu tím xanh chủ đạo */
+    font-weight: 600;
+}
+
+/* 3. User Profile Styles */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%; /* Bo tròn ảnh */
+    object-fit: cover;
+}
+
+.username {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* --- BANNER STYLES --- */
+.banner {
+    background-color: #5b50e5; /* Màu nền tím xanh giống ảnh */
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+}
+
+.banner-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.banner-subtitle {
+    font-size: 16px;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+/* Khi màn hình nhỏ hơn 768px (Tablet & Mobile) */
+@media (max-width: 768px) {
+    
+    .header-container {
+        flex-direction: column; /* Xếp dọc các thành phần */
+        gap: 25px; /* Khoảng cách giữa Logo, Menu và User */
+    }
+
+    /* Căn giữa Logo */
+    .brand {
+        align-items: center;
+    }
+
+    /* Xếp dọc Menu */
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .nav-link {
+        width: 100%; /* Full chiều rộng để dễ bấm */
+        text-align: center; /* Chữ nằm giữa */
+        padding: 10px;
+    }
+    
+    /* Active Link trên mobile nổi bật hơn chút */
+    .nav-link.active {
+        background-color: #eff6ff;
+        font-weight: 700;
+    }
+
+    /* User Profile */
+    .user-profile {
+        flex-direction: column; /* Avatar trên, tên dưới */
+        gap: 8px;
+    }
+
+    .avatar {
+        width: 60px; /* Avatar to hơn trên mobile giống ảnh */
+        height: 60px;
+        border: 2px solid #5b50e5; /* Thêm viền cho đẹp */
+        padding: 2px;
+    }
+
+    /* Banner chỉnh lại text cho gọn */
+    .banner {
+        padding: 40px 20px;
+    }
+
+    .banner-title {
+        font-size: 26px;
+    }
+
+    .banner-subtitle {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
